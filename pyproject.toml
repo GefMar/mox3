@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mox31x"
+version = "1.2025.01.14"
+requires-python = ">=3.10"
+description = "Fork of mox3 with support for Python 3.1x"
+readme = "README.md"
+
+urls = { homepage = "https://github.com/GefMar/mox3" }
+classifiers = [
+    """Environment :: OpenStack
+    Programming Language :: Python
+    License :: OSI Approved :: Apache Software License
+    Programming Language :: Python :: 3.10
+    Operating System :: OS Independent
+    Development Status :: DEPRICATED
+    Intended Audience :: Developers
+    Topic :: Software Development :: Testing
+"""]
+
+[tool.flake8]
+max-line-length = 120
+inline_quotes = "double"
+format = "wemake"
+select = ["WPS"]
+
+ignore = [
+    "C", "D", "F", "DAR", "RST", "Q", "I", "S",
+    "WPS110", "WPS123",
+    "WPS201", "WPS237",
+    "WPS300", "WPS305", "WPS306", "WPS332",
+    "WPS410", "WPS412", "WPS430",
+    "WPS602", "WPS605"]
+
+per-file-ignores = [
+    "__init__.py:WPS347, WPS440",]
